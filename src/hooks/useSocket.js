@@ -1,8 +1,7 @@
 import { useEffect } from "react";
 import { io } from "socket.io-client";
 
-const socket = io("http://localhost:5000");
-
+const socket = io("https://real-time-task-system-production.up.railway.app");
 const useSocket = (onTaskUpdate) => {
   useEffect(() => {
     socket.on("task-update", onTaskUpdate);
